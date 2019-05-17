@@ -1,0 +1,37 @@
+<!-- BEGIN: REGISTRATION -->
+<script type="text/javascript">
+    function Deleteitem(id){
+        if(confirm("Do you want to delete this item?")){
+            window.location.href = "?m=user&a=delete&id=" + id;
+        }
+    }
+</script>
+<table class="table table-striped">
+    <tr>
+        <th>Nbr</th>
+        <th>User</th>
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Action</th>
+    </tr>
+    <!-- BEGIN: LOOP -->
+    <tr>
+            <td>{LOOP.id}</td>
+            <td>{LOOP.user}</td>
+            <td>{LOOP.email}</td>
+            <td>{LOOP.f_name}</td>
+            <td>{LOOP.l_name}</td>
+            <td>{LOOP.gender}</td>
+            <td><a href= "javascript:void(0)" onclick="Deleteitem('{LOOP.id}')">Delete</a>&nbsp 
+                <a href="?m=user&a=update&id={LOOP.id}">Update</a>
+            </td>
+
+    </tr>
+    <!-- END: LOOP -->
+</table>
+<div ><a href="?m=user&a=registration">Regis</a></div>
+
+
+<!-- END: REGISTRATION -->

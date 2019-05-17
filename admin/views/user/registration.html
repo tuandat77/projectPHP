@@ -1,0 +1,69 @@
+<!-- BEGIN: REGISTRATION -->
+
+<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-md-6 row-container">
+				<form  method="POST" accept-charset="utf-8">
+					<h2>Registration form</h2>
+					<div class="form-group">
+						<div class="inputWithIcon">
+							<input type="text" class="form-control" name="txtuser" id="txtUsername" placeholder="Username">
+							<i class="fa fa-user fa-lg fa-fw" aria-hidden="true" ></i>
+							<p class="error">{username_mess}</p>
+						</div>
+						
+					</div>
+					<div class="form-group">
+						<div class="inputWithIcon">
+							<input type="text" class="form-control" name="txtemail" id="txtEmail" placeholder="Email Address">
+							<i class="fas fa-envelope fa-lg fa-fw" aria-hidden="true" ></i>
+							<p class="error">{email_mess}</p>
+						</div>
+						
+					</div>
+					<div class="form-group">
+						<div class="inputWithIcon">
+							<table>
+								<tr>
+									<td width="35%" ><input type="password" class="form-control" name="txtPassword" id="txtPassword" placeholder="Password">
+									<i class="fas fa-key fa-lg fa-fw" aria-hidden="true" ></i><p class="error">{pass_mess}</p></td>
+									<td width="45%" ><input type="password" class="form-control " name="txtCfpassword" id="txtCfpassword" placeholder="Confirm Password"><p class="error">{confirm_mess}</p></td>
+								</tr>
+							</table>
+						</div>						
+					</div>
+					<h2>Pesonal details</h2>
+					<div class="form-group">
+						<div class="inputWithIcon">
+							<table>
+								<tr>
+									<td width="35%" ><input type="text" class="form-control " name="txtFirstname" id="txtFirstname" placeholder="First Name"><p class="error">{fname_mess}</p>
+									</td>
+									<td width="45%" ><input type="text" class="form-control " name="txtLastname" id="txtLastname" placeholder="Last Name "><p class="error">{lname_mess}</p></td>
+								</tr>
+							</table>
+						</div>						
+					</div>
+					<span>Gender</span>
+					<div class="form-group">
+						<select name="gender" >
+							<option value=""></option>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+							<option value="Unknow">Unknow</option>
+						</select>
+						<p class="error">{gender_mess}</p>
+					</div>
+					<div class="form-inline"><input type="checkbox" id="check1"> <span> &nbsp I want to receive news and special offers </span></div>
+					<div class="form-inline my-2"><input type="checkbox" id="check2"><span> &nbsp I agree with the Terms and Conditions </span></div><br>
+					<div >
+						<button type="submit" name="btnSubmit" class="btn btn-info btn-lg" >Submit</button>
+					</div>
+					
+				</form>
+			</div>
+			
+		</div>
+		
+	</div>
+<!-- END: REGISTRATION -->

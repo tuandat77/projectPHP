@@ -1,0 +1,20 @@
+<!-- BEGIN: UPDATES_USER -->
+<form method="POST">
+	ID:<br> <input type="hidden" size="1" name="id"  class="form-control mb-2 mr-sm-2" value="{UPDATES_USER.id}" >{UPDATES_USER.id} </br>
+	User:<br> <input type="text" size="30" name="user" class="form-control mb-2 mr-sm-2" value="{UPDATES_USER.user}"></br><span>{error_user}</span>
+	Email:<br> <input type="text" size="30" name="email" class="form-control mb-2 mr-sm-2" value="{UPDATES_USER.email}"></br><span>{error_email}</span>
+	First Name:<br> <input type="text" size="30" name="f_name" class="form-control mb-2 mr-sm-2" value="{UPDATES_USER.f_name}"></br><span>{error_f_name}</span>
+	Last Name:<br> <input type="text" size="30" name="l_name" class="form-control mb-2 mr-sm-2" value="{UPDATES_USER.l_name}"></br><span>{error_l_name}</span>
+	<span>Gender</span>
+		<select name="gender">
+			<option value="{UPDATES_USER.gender}">{UPDATES_USER.gender}</option>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+			<option value="Unknow">Unknow</option>
+		</select>
+		<span>{error_gender}</span>					
+	<input type="submit" value="Save">
+	
+</form>
+
+<!-- END: UPDATES_USER-->
