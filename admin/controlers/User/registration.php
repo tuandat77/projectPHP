@@ -1,6 +1,5 @@
 <?php 
 global $db;
-$f =1;
 $xtpl =  new XTemplate("views/user/registration.html");
 if($_POST){
 	$user = $_POST["txtuser"];
@@ -10,6 +9,7 @@ if($_POST){
 	$l_name = $_POST["txtLastname"];
 	$gender = $_POST["gender"];	
 	$cfpassword = $_POST["txtCfpassword"];
+	$f =1;
 	if(strlen($user)==0  ){
 		$f=0;
 		$xtpl->assign("username_mess","Please enter your user name !");
@@ -38,16 +38,18 @@ if($_POST){
 		$f=0;
 		$xtpl->assign("gender_mess","Please enter your gender !");
 	}
+
 	if($f==1){
-		$ar["user"] = "'{$user}'";
-		$ar["email"] = "'{$email}'";
-		$ar["password"] = "'{$password}'";
-		$ar["f_name"] = "'{$f_name}'";
-		$ar["l_name"] = "'{$l_name}'";
-		$ar["gender"] = "'{$gender}'";
+		$ar["user"]="'{$user}'";
+		$ar["email"]="'{$email}'";
+		$ar["password"]="'{$password}'";
+		$ar["f_name"]="'{$f_name}'";
+		$ar["l_name"]="'{$l_name}'";
+		$ar["gender"]="'{$gender}'";
 		
 
 		$db->insert('tbluser',$ar);
+		header("Location:?m=user&a=list");
 	}
 }
 

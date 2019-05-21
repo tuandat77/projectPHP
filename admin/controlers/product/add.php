@@ -8,6 +8,7 @@ if($_POST){
 		$ar["name"]="'$name'";
 		$ar["id"]="'$id'";
 		$db->insert('categories',$ar);
+		header("Location:?m=product&a=list");
 	}
 }
 
